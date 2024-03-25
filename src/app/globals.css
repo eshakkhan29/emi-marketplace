@@ -2,32 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/* body bg */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-pc-1;
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* button preset */
+.pbtn {
+  @apply bg-pc-6 py-2 px-3 rounded-[5px] text-white font-semibold text-base hover:bg-pc-8 duration-300;
+}
+.pbtn-outline {
+  @apply border border-pc-6 py-2 px-3 rounded-[5px] text-pc-6 font-semibold text-base hover:bg-pc-7 hover:text-white duration-300;
+}
+.dbtn {
+  @apply bg-dc-2 py-2 px-3 rounded-[5px] text-dc-6 font-semibold text-base hover:bg-dc-6 hover:text-white duration-300;
+}
+.dbtn-outline {
+  @apply border border-dc-6 py-2 px-3 rounded-[5px] text-dc-6 font-semibold text-base hover:bg-dc-6 hover:text-white duration-300;
 }
